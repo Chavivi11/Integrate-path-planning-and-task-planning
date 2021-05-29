@@ -1,11 +1,11 @@
 {
-	"stage": "../res/test_2.png",
+	"stage": "../res/EjemploDiapositiva.png",
 	"robot": "../conf/robot.json",
 	"controller": "../conf/controller-pathplanning.json",
 	"gui": true,
-	"algorithm": "A*",
-	"heuristic": "naive",
-	"start": [18, 13],
-	"goal": [11, 20],
-	"grid_size": 32
+	"algorithm": "Dijkstra",
+	"heuristic": "octile",
+	"start": [1, 1],
+	"goal": [29, 29],
+	"grid_size": 30
 }
