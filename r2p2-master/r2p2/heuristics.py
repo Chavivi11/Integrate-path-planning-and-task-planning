@@ -34,7 +34,10 @@ def manhattan(point,point2):
     """
         Function that performs Manhattan heuristic.
     """
-    return abs(point.point[0] - point2.point[0]) + abs(point.point[1] - point2.point[1])
+    dx = point.point[0] - point2.point[0]
+    dy = point.point[1] - point2.point[1]
+
+    return abs(dx) + abs(dy)
 
 pp.register_heuristic('manhattan', manhattan)
 
@@ -50,8 +53,10 @@ def euclidean(point, point2):
     """
         Function that performs euclidean heuristic.
     """
+    dx = point.point[0]-point2.point[0]
+    dy = point.point[1]-point2.point[1]
 
-    return sqrt(pow(point.point[0]-point2.point[0], 2) + pow(point.point[1]-point2.point[1], 2))
+    return sqrt((dx*dx) + (dy*dy))
 
 pp.register_heuristic('euclidean', euclidean)
 
